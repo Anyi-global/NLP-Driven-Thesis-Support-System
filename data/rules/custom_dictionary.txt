@@ -1,0 +1,7 @@
+# Project vocabulary that LanguageTool should not report as misspelt (one lowercase word per line).
+# Capitalised words, acronyms and tokens containing digits are already ignored automatically.
+docx
+dfd
+erd
+ssadm
+ooadm

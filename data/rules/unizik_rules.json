@@ -1,0 +1,447 @@
+[
+  {
+    "id": "PRE-001",
+    "category": "preliminary_pages",
+    "description": "Check required preliminary pages are present and in the order the Manual specifies.",
+    "check": "preliminary_order",
+    "severity": "high",
+    "suggestion": "Arrange the preliminary pages in the Manual's order: Title Page, Certification, Approval, Dedication (if any), Acknowledgements, Abstract, Table of Contents, Lists of Tables/Figures/Plates where applicable, List of Abbreviations, List of Symbols where applicable, Operational Definition of Terms.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section A 1, pp. 1-4.",
+    "active": true,
+    "sequence": [
+      {
+        "key": "Certification",
+        "pattern": "CERTIFICATION",
+        "required": true
+      },
+      {
+        "key": "Approval page",
+        "pattern": "APPROVAL(?: PAGE)?",
+        "required": true
+      },
+      {
+        "key": "Dedication",
+        "pattern": "DEDICATION",
+        "required": false
+      },
+      {
+        "key": "Acknowledgements",
+        "pattern": "ACKNOWLEDG(?:E)?MENTS?",
+        "required": true
+      },
+      {
+        "key": "Abstract",
+        "pattern": "ABSTRACT",
+        "required": true
+      },
+      {
+        "key": "Table of Contents",
+        "pattern": "TABLE OF CONTENTS|CONTENTS",
+        "required": true
+      },
+      {
+        "key": "List of Tables",
+        "pattern": "LIST OF TABLES",
+        "required": false
+      },
+      {
+        "key": "List of Figures",
+        "pattern": "LIST OF FIGURES",
+        "required": false
+      },
+      {
+        "key": "List of Plates",
+        "pattern": "LIST OF PLATES",
+        "required": false
+      },
+      {
+        "key": "List of Abbreviations",
+        "pattern": "(?:LIST OF )?(?:ABBREVIATIONS|ACRONYMS)(?: AND ACRONYMS)?",
+        "required": true
+      },
+      {
+        "key": "List of Symbols",
+        "pattern": "LIST OF SYMBOLS",
+        "required": false
+      },
+      {
+        "key": "Operational Definition of Terms",
+        "pattern": "OPERATIONAL DEFINITION OF TERMS",
+        "required": true
+      }
+    ]
+  },
+  {
+    "id": "MS-CH1-001",
+    "category": "chapter_structure",
+    "description": "Check Chapter One segments required by the Manual (Rationale, Justification, Research Questions and Hypotheses are 'where applicable').",
+    "check": "required_headings",
+    "chapter": "CHAPTER ONE",
+    "required": [
+      "Background to the Study",
+      "Statement of the Problem",
+      "Aim/Purpose of the Study || Aim of the Study || Purpose of the Study || Aim and Objectives of the Study || Aims and Objectives of the Study || Purpose and Objectives of the Study",
+      "Research Objectives || Objectives of the Study || Aim and Objectives of the Study || Aims and Objectives of the Study || Purpose and Objectives of the Study",
+      "Significance of the Study",
+      "Scope of the Study"
+    ],
+    "severity": "medium",
+    "suggestion": "Add the missing Chapter One segments required by the Manual. Aim/Purpose and Research Objectives may appear as separate headings or under one combined heading such as 'Aim and Objectives of the Study' (accepted for this project by the supervisor); objectives must be itemised.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section B 2.1, pp. 5-8.",
+    "active": true,
+    "optional": [
+      "Rationale for/Relevance of the Study",
+      "Justification for the Study",
+      "Research Questions",
+      "Research Hypotheses"
+    ]
+  },
+  {
+    "id": "MS-CH2-001",
+    "category": "chapter_structure",
+    "description": "Check Chapter Two segments required by the Manual (Conceptual Framework, Theoretical Framework and Theoretical Studies are 'where applicable').",
+    "check": "required_headings",
+    "chapter": "CHAPTER TWO",
+    "required": [
+      "Empirical Studies",
+      "Summary of Literature Review"
+    ],
+    "severity": "medium",
+    "suggestion": "Add the missing Chapter Two segments required by the Manual. Empirical studies must be synthesised under sub-headings, not presented abstract by abstract.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section B 2.2, pp. 8-9.",
+    "active": true,
+    "optional": [
+      "Conceptual Framework",
+      "Theoretical Framework",
+      "Theoretical Studies"
+    ]
+  },
+  {
+    "id": "CS-CH3-001",
+    "category": "chapter_structure",
+    "description": "Check Computer Science Chapter Three required sections.",
+    "check": "required_headings",
+    "chapter": "CHAPTER THREE",
+    "required": [
+      "3.1 Methodology Adopted",
+      "3.2 System Analysis",
+      "3.2.1 Analysis of the Existing System",
+      "3.2.1.1 Weaknesses of the Existing System",
+      "3.2.2 Analysis of the Proposed System",
+      "3.2.2.1 Advantages of the Proposed System",
+      "3.2.2.2 High Level Model of the Proposed System"
+    ],
+    "severity": "high",
+    "suggestion": "Check the Chapter Three structure against the departmental guide. Include suitable labelled diagrams according to the methodology adopted (for example DFD/ERD for SSADM or use-case and interaction diagrams for OOADM).",
+    "manual_reference": "Computer Science MSc/PhD Documentation Format (chapter structure for Chapters 3-5).",
+    "active": true
+  },
+  {
+    "id": "CS-CH4-001",
+    "category": "chapter_structure",
+    "description": "Check Chapter Four sections. Items the format marks '(if any)' or 'choose those applicable' (4.4.x, 4.5, 4.6) are not required.",
+    "check": "required_headings",
+    "chapter": "CHAPTER FOUR",
+    "required": [
+      "4.1 Objectives of the Design",
+      "4.2 Control Centre/Main Menu",
+      "4.3 The Submenus/Subsystems",
+      "4.4 System Specifications",
+      "4.7 System Implementation",
+      "4.7.1 Proposed System Requirements",
+      "4.7.2 Program Development",
+      "4.7.3 System Testing",
+      "4.7.4 System Security",
+      "4.7.5 Training",
+      "4.7.6 Documentation",
+      "4.7.7 System Conversion"
+    ],
+    "severity": "high",
+    "suggestion": "Verify Chapter Four against the departmental outline. Include only applicable optional subsections, but ensure relevant design, implementation, testing and security material is documented.",
+    "manual_reference": "Computer Science MSc/PhD Documentation Format (chapter structure for Chapters 3-5).",
+    "active": true,
+    "optional": [
+      "4.4.1 Database Development Tool",
+      "4.4.2 Database Design and Structure",
+      "4.4.3 Math Specification",
+      "4.4.4 Program Module Specification",
+      "4.4.5 Input/Output Format",
+      "4.4.6 Algorithm",
+      "4.4.7 Data Dictionary",
+      "4.5 System Flowchart",
+      "4.6 Object Diagrams"
+    ]
+  },
+  {
+    "id": "CS-CH5-001",
+    "category": "chapter_structure",
+    "description": "Check Computer Science Chapter Five and contribution-to-knowledge section.",
+    "check": "required_headings",
+    "chapter": "CHAPTER FIVE",
+    "required": [
+      "5.1 Summary",
+      "5.2 Conclusion",
+      "5.3 Recommendation",
+      "5.3.1 Application Areas",
+      "5.3.2 Suggestion for Further Research",
+      "5.4 Contribution to Knowledge"
+    ],
+    "severity": "medium",
+    "suggestion": "Check the Chapter Five outline. The departmental guide says Contribution to Knowledge is included for MSc and PhD works.",
+    "manual_reference": "Computer Science MSc/PhD Documentation Format (chapter structure for Chapters 3-5).",
+    "active": true
+  },
+  {
+    "id": "FMT-001",
+    "category": "formatting",
+    "description": "Check page margins in every section: left 2.5 cm; right, top and bottom 2.0 cm.",
+    "check": "margins_inches",
+    "expected": 1.0,
+    "tolerance": 0.05,
+    "severity": "high",
+    "suggestion": "Set the left margin to 2.5 cm and the right, top and bottom margins to 2.0 cm (Layout > Margins > Custom).",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(iv)-(v), p. 35.",
+    "active": true,
+    "profiles": {
+      "Manual of Style (left 2.5 cm; right, top, bottom 2.0 cm)": {
+        "top": 0.79,
+        "bottom": 0.79,
+        "left": 0.98,
+        "right": 0.79
+      }
+    }
+  },
+  {
+    "id": "FMT-002",
+    "category": "formatting",
+    "description": "Check that body text uses Times New Roman (effective font, including style-inherited fonts).",
+    "check": "font_name",
+    "expected": "Times New Roman",
+    "severity": "medium",
+    "suggestion": "Set body text to Times New Roman, preferably by modifying the Normal style so the change applies everywhere.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(i), p. 35.",
+    "active": true,
+    "tolerance_share": 0.05
+  },
+  {
+    "id": "FMT-003",
+    "category": "formatting",
+    "description": "Check that body text is 12 pt (effective size, including style-inherited sizes).",
+    "check": "font_size_pt",
+    "expected": 12,
+    "tolerance": 0.5,
+    "severity": "medium",
+    "suggestion": "Use 12-point body text as specified by the departmental guide, preferably by modifying the Normal style.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(i), p. 35.",
+    "active": true,
+    "tolerance_share": 0.05
+  },
+  {
+    "id": "STR-001",
+    "category": "structure",
+    "description": "Check for a References section.",
+    "check": "required_text",
+    "pattern": "(?im)^\\s*REFERENCES\\s*$",
+    "severity": "high",
+    "suggestion": "Include a References section and list works cited in the thesis according to the UNIZIK citation and referencing rules.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C, pages 21 onward; Computer Science Documentation Format, page 2.",
+    "active": true,
+    "partial_draft_severity": "low"
+  },
+  {
+    "id": "CITE-001",
+    "category": "citations",
+    "description": "Check whether author-year citations are detected.",
+    "check": "citations_present",
+    "severity": "low",
+    "suggestion": "No author-year citations were detected automatically. Review citations manually; this may be a parser limitation and does not prove citations are absent.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C, pages 15–21.",
+    "active": true
+  },
+  {
+    "id": "REF-001",
+    "category": "references",
+    "description": "Check that detected citations have likely matching reference-list entries.",
+    "check": "citation_reference_match",
+    "severity": "low",
+    "suggestion": "Check whether this in-text citation has a corresponding reference-list entry. Matching is heuristic and can produce false positives.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C, pages 21 onward.",
+    "active": true
+  },
+  {
+    "id": "FMT-004",
+    "category": "formatting",
+    "description": "Check that body text (chapters) uses double (2.0) line spacing.",
+    "check": "line_spacing",
+    "expected": 1.5,
+    "tolerance": 0.05,
+    "tolerance_share": 0.1,
+    "severity": "medium",
+    "suggestion": "Set chapter text to double (2.0) line spacing (Paragraph > Line spacing > Double). The Manual specifies 1.5 only for the title page, certification, approval, dedication, acknowledgements, abstract and cover page.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(i), p. 35; Section B 2.1-2.5.",
+    "active": true,
+    "expected_any": [
+      2.0
+    ]
+  },
+  {
+    "id": "FMT-005",
+    "category": "formatting",
+    "description": "Check that every section uses A4 paper.",
+    "check": "paper_size",
+    "expected_inches": [
+      8.27,
+      11.69
+    ],
+    "tolerance": 0.1,
+    "severity": "high",
+    "suggestion": "Set the paper size to A4 (21.0 x 29.7 cm) for the whole document (Layout > Size > A4).",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(iii), p. 35.",
+    "active": true
+  },
+  {
+    "id": "FMT-006",
+    "category": "formatting",
+    "description": "Check that pages are numbered at the bottom right, with Roman numerals for preliminary pages and Arabic numerals for the main body.",
+    "check": "page_numbering",
+    "severity": "medium",
+    "suggestion": "Insert page numbers in the footer, right-aligned. Use lower-case Roman numerals (i, ii) for preliminary pages and Arabic numerals (1, 2) from Chapter One; add a section break after the preliminary pages to switch styles.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.1(vii), p. 35.",
+    "active": true
+  },
+  {
+    "id": "CITE-002",
+    "category": "citations",
+    "description": "Check that parenthetical citations separate author and year with a comma.",
+    "check": "citation_format",
+    "severity": "low",
+    "suggestion": "Place a comma between author and year, e.g. (Okeke, 2014).",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C 3.1.1, p. 15.",
+    "active": true
+  },
+  {
+    "id": "CITE-003",
+    "category": "citations",
+    "description": "Check that two-author citations use 'and' rather than '&'.",
+    "check": "citation_ampersand",
+    "severity": "low",
+    "suggestion": "Join author names with 'and' rather than '&'.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C 3.1.2(i), pp. 15-16.",
+    "active": true
+  },
+  {
+    "id": "REF-002",
+    "category": "references",
+    "description": "Check that every reference-list entry is cited in the text.",
+    "check": "uncited_references",
+    "severity": "low",
+    "suggestion": "For science, education, management and social-science theses, only works actually cited may be listed under References (Arts disciplines may use a Bibliography). Cite this work or remove it. Matching is heuristic (first author surname and year).",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C 3.3.1, p. 21.",
+    "active": true
+  },
+  {
+    "id": "REF-003",
+    "category": "references",
+    "description": "Check that references are in alphabetical order by author surname.",
+    "check": "reference_order",
+    "severity": "low",
+    "suggestion": "Sort the reference list alphabetically by first author's surname.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C 3.3.1, p. 21.",
+    "active": true
+  },
+  {
+    "id": "PRE-002",
+    "category": "preliminary_pages",
+    "description": "Check abstract length: at most 300 words (MSc) or 500 words (PhD), in one block paragraph.",
+    "check": "abstract_length",
+    "limits": {
+      "msc": 300,
+      "phd": 500
+    },
+    "severity": "medium",
+    "suggestion": "Shorten the abstract to the limit for your degree (300 words for a Master's thesis, 500 for a Doctoral dissertation) and write it as one block paragraph.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section A 1.6, p. 4.",
+    "active": true
+  },
+  {
+    "id": "STR-002",
+    "category": "structure",
+    "description": "Check that typed heading numbers run in sequence within each chapter (e.g. 2.3 is followed by 2.4, not 2.5).",
+    "check": "heading_numbering",
+    "severity": "low",
+    "suggestion": "Renumber headings so each level counts up without gaps or repeats.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.2, pp. 35-36 (numbered four-tier headings).",
+    "active": true
+  },
+  {
+    "id": "CITE-004",
+    "category": "citations",
+    "description": "Check that works cited together are in alphabetical order, e.g. (Nkamigbo, 2018; Nwankwo, 1998; Okoye, 2005).",
+    "check": "citation_group_order",
+    "severity": "low",
+    "suggestion": "Arrange citations that appear together in alphabetical order by author.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section C 3.1.2(iv), p. 16.",
+    "active": true
+  },
+  {
+    "id": "FMT-007",
+    "category": "formatting",
+    "description": "Check heading formats: chapter number and title centred, bold, uppercase; level two bold title case; level three bold sentence case; level four bold italic sentence case; at most four levels.",
+    "check": "heading_format",
+    "severity": "medium",
+    "suggestion": "Format headings as the Manual specifies: chapter number and title centred, bold, UPPERCASE; level two (4.1) bold, flush left, Title Case; level three (4.1.1) bold, flush left, only the first word capitalised; level four (4.1.1.1) bold italic, flush left, only the first word capitalised. Use no more than four levels.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.2, pp. 35-37.",
+    "active": true
+  },
+  {
+    "id": "STY-001",
+    "category": "style",
+    "description": "Check for standard Latin abbreviations (e.g., i.e., etc., viz., cf., ibid.), which the Manual does not allow in the text (except et al.).",
+    "check": "latin_abbreviations",
+    "severity": "low",
+    "suggestion": "Replace Latin abbreviations with English words (for example: 'such as', 'that is', 'and so on'). Only 'et al.' (and 'vs.' for Law) is permitted, in italics.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.8(ii), p. 41.",
+    "active": true
+  },
+  {
+    "id": "STY-002",
+    "category": "style",
+    "description": "Check numeral conventions: no ordinal suffixes on dates or positions (15th, 5th), no apostrophe in decades (1990's), no spelled number mixed with %.",
+    "check": "numeral_style",
+    "severity": "low",
+    "suggestion": "Write dates as '15 December, 2005' (no 'th'); write positions in words ('fifth'); write decades as '1990s'; write '90%' or 'ninety percent', not 'ninety %'.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.5(a)-(c), pp. 39-40.",
+    "active": true
+  },
+  {
+    "id": "STY-003",
+    "category": "style",
+    "description": "Check that Chapter Four is written in the third person.",
+    "check": "third_person",
+    "chapter": 4,
+    "severity": "low",
+    "suggestion": "Rewrite first-person statements (I, we, our, my, us) in the third person (for example 'the system', 'the researcher').",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section B 2.4.1.1, p. 12.",
+    "active": true
+  },
+  {
+    "id": "ABBR-001",
+    "category": "style",
+    "description": "Check that each acronym is spelled out on first use, followed by the abbreviation in parentheses.",
+    "check": "acronym_definitions",
+    "severity": "low",
+    "suggestion": "On first use, spell the term out in full and put the abbreviation in parentheses, e.g. Natural Language Processing (NLP). Afterwards the abbreviation may be used alone.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section D 4.8(i), p. 41.",
+    "active": true
+  },
+  {
+    "id": "LANG-001",
+    "category": "language",
+    "description": "British-English spelling and grammar check (LanguageTool, optional).",
+    "check": "languagetool",
+    "severity": "low",
+    "suggestion": "Review the highlighted wording. Theses must be written in British English.",
+    "manual_reference": "UNIZIK Manual of Style (2019), Section A 1, p. 1 (British English).",
+    "active": true
+  }
+]

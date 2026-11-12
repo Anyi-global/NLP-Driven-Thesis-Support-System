@@ -1,0 +1,12 @@
+Flask>=3.0,<4.0
+Flask-SQLAlchemy>=3.1,<4.0
+Flask-Login>=0.6,<1.0
+Flask-Migrate>=4.0,<5.0
+bcrypt>=4.1,<6.0
+python-docx>=1.1,<2.0
+pdfplumber>=0.11,<1.0
+reportlab>=4.0,<5.0
+python-dotenv>=1.0,<2.0
+google-genai>=1.0,<2.0
+# Optional, for the FAISS retriever: faiss-cpu numpy (see scripts/build_vector_store.py)
+pytest>=8.0,<9.0

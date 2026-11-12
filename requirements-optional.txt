@@ -1,0 +1,9 @@
+# Optional language engines. The app runs without any of these (regex / BM25 fallbacks), and the analysis
+# summary reports which engines were active. Install with:  pip install -r requirements-optional.txt
+spacy>=3.7,<4.0                  # sentence/token segmentation (blank English pipeline: no model download needed)
+nltk>=3.8                        # Porter stemming for retrieval (no corpus download needed)
+language-tool-python>=2.8        # British-English grammar/spelling; needs Java; set LANGUAGETOOL_ENABLED=1
+langchain-community>=0.3         # FAISS vector store wrapper (retrieval, thesis stack)
+langchain-google-genai>=2.0      # Gemini embeddings for LangChain
+faiss-cpu>=1.8
+numpy>=1.26
